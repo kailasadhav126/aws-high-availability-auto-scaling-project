@@ -2,7 +2,10 @@
 Highly Available and Scalable Web Application on AWS using Auto Scaling and Load Balancer
 
 ## Architecture Diagram
+
 ![image alt](https://github.com/kailasadhav126/aws-high-availability-auto-scaling-project/blob/2d2cf67b1b732d6ea63d9a6564edaa6fb9413e68/images/main%20Architecture.png)
+
+<br>
 
 ![image alt](https://github.com/kailasadhav126/aws-high-availability-auto-scaling-project/blob/2d2cf67b1b732d6ea63d9a6564edaa6fb9413e68/images/archiflow.png)
 
@@ -18,33 +21,43 @@ Highly Available and Scalable Web Application on AWS using Auto Scaling and Load
 - Target Group
 - SNS (Simple Notification Service)
 
+<br>
+
 ⚙️ Step-by-Step Implementation <br>
 
 🔹 Step 1: Create EC2 Instance
+
 <br>
 
 Firstly, I created an EC2 instance and installed a web server (Apache).
 
 Then I added a simple HTML page to display instance details like hostname.
+
 <br>
 
 ![image alt](https://github.com/kailasadhav126/aws-high-availability-auto-scaling-project/blob/2d2cf67b1b732d6ea63d9a6564edaa6fb9413e68/images/FINALL%20alb%20enpoint%20to%20show%20result.png)
 
 <br>
-🔹 Step 2: Create AMI (Golden Image) <br>
+🔹 Step 2: Create AMI (Golden Image)
+<br>
 
 After configuring the EC2 instance, I created an AMI (Golden Image).
+
 <br>
 
 This AMI helps to launch multiple identical instances with pre-installed configurations.
 <br>
+
 ![image alt](https://github.com/kailasadhav126/aws-high-availability-auto-scaling-project/blob/2d2cf67b1b732d6ea63d9a6564edaa6fb9413e68/images/AMI.png)
+
 <br>
 
 Step 3: Create Launch Template <br>
 
 Next, I created a Launch Template using the AMI.<br>
+
 This template defines instance configuration like instance type, security group, and user data script.
+
 <br>
 
 ![image alt](https://github.com/kailasadhav126/aws-high-availability-auto-scaling-project/blob/2d2cf67b1b732d6ea63d9a6564edaa6fb9413e68/images/LAUNCH%20TEMPLATE.png)
@@ -53,9 +66,12 @@ This template defines instance configuration like instance type, security group,
 🔹 Step 4: Create Target Group <br>
 
 Then I created a Target Group to register EC2 instances.
+
 <br>
 
-It helps the load balancer to route traffic to healthy instance <br>
+It helps the load balancer to route traffic to healthy instance
+
+<br>
 
 ![image alt](https://github.com/kailasadhav126/aws-high-availability-auto-scaling-project/blob/2d2cf67b1b732d6ea63d9a6564edaa6fb9413e68/images/TARGET%20GROUP.png)
 
@@ -64,6 +80,7 @@ It helps the load balancer to route traffic to healthy instance <br>
 🔹 Step 5: Create Application Load Balancer (ALB) <br>
 
 After that, I created an Application Load Balancer.
+
 <br>
 
 It distributes incoming traffic across multiple EC2 instances in different Availability Zones. <br>
@@ -78,6 +95,7 @@ It distributes incoming traffic across multiple EC2 instances in different Avail
 🔹 Step 6: Configure Auto Scaling Group <br>
 
 Then I created an Auto Scaling Group using the Launch Template.
+
 <br>
 
 I configured:
@@ -105,6 +123,8 @@ This helps in monitoring Auto Scaling activities.
 
 <br>
  ** for subscriber like -> email ,sqs sms
+ <br>
+ 
 ![image alt](https://github.com/kailasadhav126/aws-high-availability-auto-scaling-project/blob/2d2cf67b1b732d6ea63d9a6564edaa6fb9413e68/images/SNS%20SUB.png)
 
 <br>
