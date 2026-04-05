@@ -3,5 +3,25 @@ Highly Available and Scalable Web Application on AWS using Auto Scaling and Load
 
 ## Architecture Diagram
 <br>
-![Architecture.png](https://github.com/kailasadhav126/aws-high-availability-auto-scalinproject/blob/47aeb43c5c0378674a0a2a11f50c7b0d7521fa23/images/main%20Architecture.png)
+![image alt](https://github.com/kailasadhav126/aws-high-availability-auto-scaling-project/blob/main/images/main%20Architecture.png?raw=true)
+<br>
+![image alt](https://github.com/kailasadhav126/aws-high-availability-auto-scaling-project/blob/main/images/archiflow.png?raw=true)
+<br>
 
+![image alt]()
+![image alt]()
+![image alt]()
+![image alt]()
+![image alt]()
+![image alt]()
+![image alt]()
+![image alt]()
+![image alt]()
+![image alt]()
+![image alt]()
+![image alt]()
+![image alt]()
+![image alt]()
+![image alt]()
+![image alt]()
+![image alt]()
