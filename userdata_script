@@ -10,7 +10,7 @@ echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
 
 ani for  advance madhe  ki va custome vpc use kela tar 2 vpcs and  create 4 subnets and two for public  and two for private ( ALB la public madhe devliach ani ec2 la private madhe devaich ) ,then  crete (two route table ) 
 
-  ***   User → ALB → Target Group → EC2 (ASG) → Response***
+ **** User → ALB → Target Group → EC2 → Auto Scaling → SNS ****
 
 🎯 🔥 Interview Flow (Perfect Answer)
 🗣️ Start like this:
