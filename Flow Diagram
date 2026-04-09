@@ -37,3 +37,52 @@
         ┌────────────────────┐
         │        SNS         │
         └────────────────────┘
+
+
+
+
+
+
+🎯 ✅ MUST MATCH (Same pahije)
+1️⃣ VPC (Same pahije 🔥)
+
+👉 ALB, Target Group, ASG sagle same VPC madhe pahijet
+
+❌ Different VPC → connect honar nahi
+
+2️⃣ Availability Zones (Same pahije 🔥)
+
+👉 ALB AZ = ASG AZ
+
+✔ Example:
+
+ALB → AZ1, AZ2
+ASG → AZ1, AZ2
+3️⃣ Target Group ↔ ASG Connection
+
+👉 ASG create kartana:
+
+Same Target Group attach pahije
+4️⃣ Security Flow (Indirect matching)
+
+👉 Same SG nahi pahije, pan connection pahije
+
+ALB SG → allow HTTP from internet
+EC2 SG → allow HTTP from ALB SG ✅
+⚠️ SHOULD MATCH (Recommended)
+5️⃣ Port (Same pahije)
+ALB Listener → Port 80
+Target Group → Port 80
+EC2 → Port 80
+
+👉 Sagle same asel tar smooth traffic flow hoil
+
+6️⃣ Health Check Path
+
+👉 Target Group madhe:
+
+Path: /
+
+👉 EC2 var:
+
+/ open pahije (index.html)
